@@ -1,0 +1,28 @@
+.Header {
+  height: 4rem;
+  background-color: rgb(199, 142, 251);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Toolbar {
+  max-width: 90%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navlist {
+    list-style : none;
+}
+
+.Link {
+    text-decoration: none;
+}
+
+.Header h2 {
+    color:  white;
+}

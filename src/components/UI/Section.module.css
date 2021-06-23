@@ -1,0 +1,8 @@
+.Section {
+    width: 90%;
+    padding: 2rem;
+    margin: 3rem auto;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 35px whitesmoke;
+}

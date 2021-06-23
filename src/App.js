@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Layout from "./components/Layout/Layout";
+import { CssBaseline } from "@material-ui/core";
+import { Route, Switch } from "react-router-dom";
+import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
+import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
+import LoginPage from "./pages/Login";
 
-function App() {
+
+
+
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Layout>
+        <Switch>
+            <Route path="/" exact >
+              <Home />
+            </Route>
+            <Route path="/login" exact >
+              <LoginPage />
+            </Route>
+            <Route path="/shop" exact>
+              <Shop />
+            </Route>
+            <Route path="/product/:productId" exact>
+               <ProductDetails />
+            </Route>
+            <Route path="/cart" exact>
+              <Cart />
+            </Route>
+        </Switch>
+      </Layout>
+    </>
   );
-}
+};
 
 export default App;
